@@ -3,6 +3,9 @@ package com.pabhinav;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.lang.reflect.Field;
 
 import static org.junit.Assert.assertEquals;
@@ -17,8 +20,8 @@ public class JokeRepositoryTest {
     private JokeRepository jokeRepository;
 
     @Before
-    public void setUp(){
-        jokeRepository = new JokeRepository();
+    public void setUp() throws IOException{
+        jokeRepository = new JokeRepository(new FileInputStream(new File("src/main/res/repo/jokes")));
     }
 
     @Test(expected = NullPointerException.class)

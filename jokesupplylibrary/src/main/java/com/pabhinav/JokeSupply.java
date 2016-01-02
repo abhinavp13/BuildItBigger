@@ -1,6 +1,7 @@
 package com.pabhinav;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Random;
 import java.util.logging.Logger;
 
@@ -26,8 +27,8 @@ public class JokeSupply {
     /**
      * Constructor for initializing joke repository.
      */
-    public JokeSupply(){
-        jokeRepository = new JokeRepository();
+    public JokeSupply(InputStream inputStream){
+        jokeRepository = new JokeRepository(inputStream);
     }
 
     /**
@@ -40,14 +41,14 @@ public class JokeSupply {
     public String tellMeJoke(){
         try {
             return (jokeRepository.getJokeList()).get(getRandomValue(jokeRepository.getJokeListSize()));
-        } catch (IOException ioe){
+        } catch (Exception ioe){
             LOGGER.warning("JokeSupply was not able to supply joke. Reason : " + ioe);
             return "Derp !!!";
         }
     }
 
     /**
-     * This function retuns a random value from 0 to size specified.
+     * This function returns a random value from 0 to size specified.
      * 0 is inclusive and size is exclusive.
      *
      * @param size

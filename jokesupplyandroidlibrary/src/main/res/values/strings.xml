@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">jokesupplyandroidlibrary</string>
+    <string name="joke_fetching_key">com.pabhinav.bib.jokesupplykey</string>
+</resources>

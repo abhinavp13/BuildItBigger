@@ -1,7 +1,7 @@
 package com.pabhinav;
 
-import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Scanner;
 
 /**
@@ -13,9 +13,9 @@ import java.util.Scanner;
 class ReadFile {
 
     /**
-     * Stores location for file.
+     * Stores joke input stream
      */
-    private String filePath;
+    private InputStream inputStream;
 
     /**
      * Stores local scanner variable.
@@ -25,11 +25,11 @@ class ReadFile {
     /**
      * Constructor saving file path and opening file for reading.
      *
-     * @param path
+     * @param inputStream
      * @throws IOException
      */
-    public ReadFile(String path) throws IOException{
-        filePath = path;
+    public ReadFile(InputStream inputStream) throws IOException{
+        this.inputStream = inputStream;
         openFileForReading();
     }
 
@@ -39,7 +39,7 @@ class ReadFile {
      * @throws IOException
      */
     private void openFileForReading() throws IOException{
-        scanner = new Scanner(new File(filePath));
+        scanner = new Scanner(inputStream);
     }
 
     /**

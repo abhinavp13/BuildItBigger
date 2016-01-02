@@ -1,6 +1,7 @@
 package com.pabhinav;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 /**
@@ -17,15 +18,16 @@ public class JokeRepository {
     private ArrayList<String> jokeList;
 
     /**
-     * Local variable storing file location.
+     * Local variable for reading jokes.
      */
-    public final static String FILE_PATH_LOCATION = new String("src/main/res/repo/jokes");
+    private InputStream inputStream;
 
     /**
      * Default Constructor.
      * Initializes empty joke list.
      */
-    public JokeRepository(){
+    public JokeRepository(InputStream inputStream){
+        this.inputStream = inputStream;
         jokeList = new ArrayList<>();
     }
 
@@ -51,7 +53,7 @@ public class JokeRepository {
     private void jokeFileParser() throws IOException{
 
         /** Read file wrapper for reading joke list file **/
-        ReadFile readFile = new ReadFile(FILE_PATH_LOCATION);
+        ReadFile readFile = new ReadFile(inputStream);
 
         String joke = readFile.getNextLine();
         while(joke != null){

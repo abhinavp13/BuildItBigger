@@ -4,6 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -26,9 +28,9 @@ public class JokeSupplyTest {
     private JokeRepository jokeRepository;
 
     @Before
-    public void setUp(){
-        jokeSupply = new JokeSupply();
-        jokeRepository = new JokeRepository();
+    public void setUp() throws IOException{
+        jokeSupply = new JokeSupply(new FileInputStream(new File("src/main/res/repo/jokes")));
+        jokeRepository = new JokeRepository(new FileInputStream(new File("src/main/res/repo/jokes")));
     }
 
     @Test
@@ -38,21 +40,26 @@ public class JokeSupplyTest {
     }
 
     @Test
-    public void TellMeJokeReadFileFailureTest() throws Exception{
+    public void TellMeJokeReadFileFailureTest() throws Exception {
 
-        /** Need to change the path value */
-        setFinalStatic(JokeRepository.class, "FILE_PATH_LOCATION", "");
+        /** Update the local joke repos variable in joke supply class */
+        Field privateInputStream = JokeRepository.class.getDeclaredField("inputStream");
+        privateInputStream.setAccessible(true);
+        privateInputStream.set(jokeRepository, null);
 
         /** Update the local joke repos variable in joke supply class */
         Field privateJokeRepository = JokeSupply.class.getDeclaredField("jokeRepository");
         privateJokeRepository.setAccessible(true);
         privateJokeRepository.set(jokeSupply,jokeRepository);
 
+
         String value = jokeSupply.tellMeJoke();
         assertEquals("Derp !!!", value);
 
         /** Need to change the path value to its original value, so that other tests are not affected */
-        setFinalStatic(JokeRepository.class, "FILE_PATH_LOCATION", new String("src/main/res/repo/jokes"));
+        Field privateInputStream1 = JokeRepository.class.getDeclaredField("inputStream");
+        privateInputStream1.setAccessible(true);
+        privateInputStream1.set(jokeRepository, new FileInputStream(new File("src/main/res/repo/jokes")));
     }
 
     @Test
