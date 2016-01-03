@@ -1,5 +1,7 @@
 package com.pabhinav.bib.jokesupplyandroidlibrary;
 
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.widget.ViewFlipper;
@@ -29,9 +31,23 @@ public class JokeDisplay extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        /** Set status bar color  **/
+        setStatusBarColor();
+
+        /** Set the main content layout **/
         setContentView(R.layout.activity_joke_display);
 
         // TODO : Splash Screen ...
+    }
+
+    /**
+     * Sets the color of status bar.
+     * Since, setting status bar color requires api level >= 21,
+     * {@link TargetApi} tag is added with this method.
+     */
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public void setStatusBarColor(){
+        getWindow().setStatusBarColor(getResources().getColor(R.color.dark_green));
     }
 
     /**

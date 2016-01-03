@@ -3,29 +3,90 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.pabhinav.bib.jokesupplyandroidlibrary.JokeDisplay"
-    android:background="@color/green"
-    android:gravity="center">
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/fake_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/green" />
+
+        <com.pabhinav.bib.jokesupplyandroidlibrary.RobotoTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="24sp"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:text= "Build iT Bigger"
+            app:font="Roboto-Regular.ttf"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@+id/fake_action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@drawable/drop_shadow" />
+
+    <View
+        android:id="@+id/cover_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#aa000000" />
+
+    <com.pabhinav.bib.jokesupplyandroidlibrary.RobotoTextView
+        android:id="@+id/tapTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fake_action_bar"
+        android:layout_above="@+id/view_flipper"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+        android:gravity="center"
+        app:font="Roboto-Light.ttf"
+        android:textColor="#ffffff"
+        android:text="Tap on below card for next joke"
+        />
 
     <ViewFlipper
         android:id="@+id/view_flipper"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:clickable="true">
 
         <fragment
             android:id="@+id/fragment_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:name="com.pabhinav.bib.jokesupplyandroidlibrary.JokeFragmentCardOne" />
+            android:name="com.pabhinav.bib.jokesupplyandroidlibrary.JokeFragmentCardOne"
+            tools:layout="@layout/joke_fragment_one" />
 
         <fragment
             android:id="@+id/fragment_two"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:name="com.pabhinav.bib.jokesupplyandroidlibrary.JokeFragmentCardTwo" />
+            android:name="com.pabhinav.bib.jokesupplyandroidlibrary.JokeFragmentCardTwo"
+            tools:layout="@layout/joke_fragment_two" />
 
     </ViewFlipper>
 
+    <Button
+        android:id="@+id/got_button"
+        android:layout_below="@+id/view_flipper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@color/green"
+        android:textColor="@android:color/white"
+        android:text="Got iT"
+        android:onClick="gotItClicked"/>
 
 </RelativeLayout>

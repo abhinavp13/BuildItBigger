@@ -47,6 +47,10 @@ public class AnimationHelper extends FlipAnimationHelper {
             @Override
             public void onClick(View v) {
 
+                /** Hide hint cover view, if visible **/
+                HintCover hintCover = new HintCover(context);
+                hintCover.hideCover();
+
                 /** Need to set a new joke in activity intent extras **/
                 Util.setJokeInIntentExtras(context);
 

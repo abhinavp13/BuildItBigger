@@ -1,6 +1,7 @@
 package com.pabhinav.bib.builditbigger;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.pabhinav.bib.jokesupplyandroidlibrary.JokeDisplay;
 
@@ -11,6 +12,11 @@ import com.pabhinav.bib.jokesupplyandroidlibrary.JokeDisplay;
  * @author pabhinav.
  */
 public class TellMeAJoke extends JokeDisplay {
+
+    /**
+     * HintCover object used to show and hide cover view.
+     */
+    private HintCover hintCover;
 
     /**
      * The onCreate method used for setting up the content view
@@ -30,5 +36,26 @@ public class TellMeAJoke extends JokeDisplay {
         AnimationHelper animationHelper = new AnimationHelper(this);
         setFlipAnimationHelper(animationHelper);
         setUpAnimation();
+
+        /** Hide cover, wait for some time and then show hint cover again. **/
+        hintCover = new HintCover(this);
+        hintCover.hideCover();
+        AsyncTaskForWaiting asyncTaskForWaiting = new AsyncTaskForWaiting(500);
+        asyncTaskForWaiting.setTimesUp(new AsyncTaskForWaiting.TimesUp() {
+            @Override
+            public void onTimesUp() {
+                hintCover.showCover();
+            }
+        });
+    }
+
+    /**
+     * "Got It" button clicked.
+     * Need to hide hint cover view on the screen.
+     *
+     * @param v
+     */
+    public void gotItClicked(View v){
+        hintCover.hideCover();
     }
 }

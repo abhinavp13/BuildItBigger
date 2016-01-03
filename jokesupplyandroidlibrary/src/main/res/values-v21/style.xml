@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- This style makes image extend over status bar -->
+    <!-- In order to have such an effect, following things were done along with below style changes :
+         FLAG_LAYOUT_NO_LIMITS flag was set in the activity onCreate method.
+         android:fitsSystemWindows="true" was added in the main container layout -->
+    <style name="jokeTheme" parent="android:Theme.Material.Wallpaper.NoTitleBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+</resources>
