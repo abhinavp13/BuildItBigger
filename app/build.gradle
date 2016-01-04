@@ -24,7 +24,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile project(':jokesupplyandroidlibrary')
     compile project(':jokesupplylibrary')
-    compile 'com.android.support:appcompat-v7:22.2.1'
-    compile 'com.android.support:design:22.2.1'
     compile 'com.jakewharton:butterknife:7.0.1'
+    compile project(path: ':gcm', configuration: 'android-endpoints')
 }

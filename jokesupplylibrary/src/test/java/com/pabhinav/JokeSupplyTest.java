@@ -2,7 +2,6 @@ package com.pabhinav;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,7 +10,9 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Test File for unit testing {@link JokeSupply} class.
@@ -29,14 +30,36 @@ public class JokeSupplyTest {
 
     @Before
     public void setUp() throws IOException{
-        jokeSupply = new JokeSupply(new FileInputStream(new File("src/main/res/repo/jokes")));
-        jokeRepository = new JokeRepository(new FileInputStream(new File("src/main/res/repo/jokes")));
+        jokeSupply = new JokeSupply();
+        jokeRepository = new JokeRepository(new FileInputStream(new File("src/main/resources/repo/jokes")));
     }
 
     @Test
     public void TellMeJokeTest(){
         String value = jokeSupply.tellMeJoke();
         assertNotEquals("Derp !!!", value);
+    }
+
+    @Test
+    public void jokeRepositoryNullTest() throws Exception {
+
+        /** change final static value for making {@link JokeRepository} object null
+         * One thing to note here is important,
+         * Sometimes its not possible to change the value of a String
+         * object, which is private final static,
+         * Do the following changes for changing its value :
+         * private static final String value = new String("Value");
+         * Now, it should work !!! **/
+        setFinalStatic(JokeSupply.class, "PATH_IN_RESOURCE", null);
+
+        /** Testing with null {@link JokeRepository} **/
+        jokeSupply = new JokeSupply();
+        String value = jokeSupply.tellMeJoke();
+        assertEquals("Derp !!!", value);
+
+        /** change final static value for remaining test functions to run correctly **/
+        setFinalStatic(JokeSupply.class, "PATH_IN_RESOURCE", "/repo/jokes");
+        jokeSupply = new JokeSupply();
     }
 
     @Test
@@ -52,14 +75,14 @@ public class JokeSupplyTest {
         privateJokeRepository.setAccessible(true);
         privateJokeRepository.set(jokeSupply,jokeRepository);
 
-
         String value = jokeSupply.tellMeJoke();
         assertEquals("Derp !!!", value);
 
         /** Need to change the path value to its original value, so that other tests are not affected */
         Field privateInputStream1 = JokeRepository.class.getDeclaredField("inputStream");
         privateInputStream1.setAccessible(true);
-        privateInputStream1.set(jokeRepository, new FileInputStream(new File("src/main/res/repo/jokes")));
+        File file = new File("src/main/resources/repo/jokes");
+        privateInputStream1.set(jokeRepository, new FileInputStream(file));
     }
 
     @Test

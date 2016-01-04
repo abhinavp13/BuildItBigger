@@ -21,7 +21,7 @@ public class JokeRepositoryTest {
 
     @Before
     public void setUp() throws IOException{
-        jokeRepository = new JokeRepository(new FileInputStream(new File("src/main/res/repo/jokes")));
+        jokeRepository = new JokeRepository(new FileInputStream(new File("src/main/resources/repo/jokes")));
     }
 
     @Test(expected = NullPointerException.class)

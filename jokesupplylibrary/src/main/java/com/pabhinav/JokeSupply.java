@@ -1,6 +1,5 @@
 package com.pabhinav;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.util.Random;
 import java.util.logging.Logger;
@@ -25,10 +24,20 @@ public class JokeSupply {
     private JokeRepository jokeRepository;
 
     /**
-     * Constructor for initializing joke repository.
+     * Static Field storing path to be followed inside 'resources' file to reach jokes file.
      */
-    public JokeSupply(InputStream inputStream){
-        jokeRepository = new JokeRepository(inputStream);
+    private final static String PATH_IN_RESOURCE = new String("/repo/jokes");
+
+    /**
+     * Constructor for initializing joke repository and passing {@link InputStream} object.
+     */
+    public JokeSupply() {
+        try {
+            jokeRepository = new JokeRepository(getClass().getResourceAsStream(PATH_IN_RESOURCE));
+        } catch (Exception e){
+            LOGGER.warning("Unable to initialize joke repository. Reason : " + e);
+            jokeRepository = null;
+        }
     }
 
     /**
@@ -43,7 +52,7 @@ public class JokeSupply {
             return (jokeRepository.getJokeList()).get(getRandomValue(jokeRepository.getJokeListSize()));
         } catch (Exception ioe){
             LOGGER.warning("JokeSupply was not able to supply joke. Reason : " + ioe);
-            return "Derp !!!";
+            return new String("Derp !!!");
         }
     }
 

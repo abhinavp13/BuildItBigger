@@ -24,7 +24,7 @@ public class Util {
     public static void setJokeInIntentExtras(Context context){
 
         /** Joke Supply java lib **/
-        JokeSupply jokeSupply = new JokeSupply(((Activity)context).getResources().openRawResource(R.raw.jokes));
+        JokeSupply jokeSupply = new JokeSupply();
 
         /** Call lib function for providing joke **/
         String Joke = jokeSupply.tellMeJoke();

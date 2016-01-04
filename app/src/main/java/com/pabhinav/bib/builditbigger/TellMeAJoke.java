@@ -2,7 +2,9 @@ package com.pabhinav.bib.builditbigger;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
+import com.pabhinav.bib.builditbigger.flickeranimation.Flicker;
 import com.pabhinav.bib.jokesupplyandroidlibrary.JokeDisplay;
 
 /**
@@ -47,6 +49,15 @@ public class TellMeAJoke extends JokeDisplay {
                 hintCover.showCover();
             }
         });
+
+
+        // Testing :
+        new GCMEndpointAsyncTask().execute(this);
+
+
+        // Flicker animation Testing :
+        Flicker flicker = new Flicker((ImageView)findViewById(R.id.truck_image_view),new int[]{R.drawable.truck_unloading_1, R.drawable.truck_unloading_2, R.drawable.truck_unloading_3, R.drawable.truck_unloading_4},250);
+        flicker.startFlicking();
     }
 
     /**
