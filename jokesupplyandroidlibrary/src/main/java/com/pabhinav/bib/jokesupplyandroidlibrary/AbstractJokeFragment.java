@@ -1,11 +1,15 @@
 package com.pabhinav.bib.jokesupplyandroidlibrary;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.pabhinav.bib.flickeranimation.Flicker;
 
 /**
  * Abstract class used by {@link JokeFragmentCardOne} and {@link JokeFragmentCardTwo},
@@ -26,6 +30,21 @@ public abstract class AbstractJokeFragment extends Fragment{
      * Text view displaying joke.
      */
     protected TextView textView;
+
+    /**
+     * Text View displaying please wait loading is going on.
+     */
+    protected TextView plzWaitTextView;
+
+    /**
+     * ImageView used for displaying loading image.
+     */
+    protected ImageView truckLoadingImage;
+
+    /**
+     * {@link Flicker} object used to start and stop loading animation.
+     */
+    protected Flicker flicker;
 
     /**
      * This method is part of fragment lifecycle.
@@ -50,7 +69,60 @@ public abstract class AbstractJokeFragment extends Fragment{
             return;
         }
 
+        /** Hide Loading **/
+        hideLoading();
+
         /** Set Joke in text view **/
         textView.setText(Util.getJokeFromIntentExtras(getActivity()));
     }
+
+    /**
+     * Sets up {@link Flicker} animation object,
+     * requires {@link ImageView} for its initialization.
+     */
+    public void setUpFlickerImageView(){
+
+        /** Frame Drawables **/
+        Drawable[] drawables = new Drawable[]{
+                getResources().getDrawable(R.drawable.truck_unloading_1),
+                getResources().getDrawable(R.drawable.truck_unloading_2),
+                getResources().getDrawable(R.drawable.truck_unloading_3),
+                getResources().getDrawable(R.drawable.truck_unloading_4)};
+
+        /** Initialize Flicker animation **/
+        flicker = new Flicker(truckLoadingImage, drawables, 250);
+    }
+
+    /**
+     * Method used to display loading elements
+     * present in the fragment's layout.
+     * Also, start flickering of image to display
+     * loading animation on screen.
+     */
+    public void displayLoading(){
+
+        plzWaitTextView.setVisibility(View.VISIBLE);
+        truckLoadingImage.setVisibility(View.VISIBLE);
+        textView.setVisibility(View.GONE);
+
+        /** Need to start flickering **/
+        flicker.startFlicking();
+    }
+
+    /**
+     * Method used to hide loading elements
+     * present in the fragment's layout.
+     * Also, stop flickering of image to hide
+     * loading animation on screen.
+     */
+    public void hideLoading(){
+
+        textView.setVisibility(View.VISIBLE);
+        plzWaitTextView.setVisibility(View.GONE);
+        truckLoadingImage.setVisibility(View.GONE);
+
+        /** Need to stop flickering **/
+        flicker.stopFlicking();
+    }
+
 }

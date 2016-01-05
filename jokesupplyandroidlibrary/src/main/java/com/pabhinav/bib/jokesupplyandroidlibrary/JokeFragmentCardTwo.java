@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -32,9 +33,14 @@ public class JokeFragmentCardTwo extends AbstractJokeFragment{
         /** Initialize rootView and TextView **/
         rootView = inflater.inflate(R.layout.joke_fragment_two, container, false);
         textView = (TextView)rootView.findViewById(R.id.text_view_card_two);
+        plzWaitTextView = (TextView)rootView.findViewById(R.id.plz_wait_text_view_two);
+        truckLoadingImage = (ImageView)rootView.findViewById(R.id.truck_image_view_two);
 
-        /** Call the super class setJoke method **/
-        setJoke();
+        /** Create a flicker object **/
+        setUpFlickerImageView();
+
+        /** Display Loading in the beginning **/
+        displayLoading();
 
         /** return the main rootView **/
         return rootView;

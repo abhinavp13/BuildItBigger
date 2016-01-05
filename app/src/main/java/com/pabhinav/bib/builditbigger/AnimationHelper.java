@@ -43,29 +43,55 @@ public class AnimationHelper extends FlipAnimationHelper {
         final ViewAnimator viewAnimator = (ViewAnimator)viewFlipper;
 
         /** Prepare click listener field **/
-        View.OnClickListener onClickListener = new View.OnClickListener() {
+        final View.OnClickListener onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                /** Hide hint cover view, if visible **/
+                /** Hide hint cover view and do nothing else, if it is visible **/
                 HintCover hintCover = new HintCover(context);
-                hintCover.hideCover();
-
-                /** Need to set a new joke in activity intent extras **/
-                Util.setJokeInIntentExtras(context);
+                if (!hintCover.isHidden()) {
+                    hintCover.hideCover();
+                    return;
+                }
 
                 /** Flip it **/
                 AnimationFactory.flipTransition(viewAnimator, AnimationFactory.FlipDirection.LEFT_RIGHT);
 
-                /** Update Fragment **/
-                updateJokeInFragment();
+                /** Time to show loading animation **/
+                updateLoadingAnimationInFragment();
+
+                /** Time to execute GCM module **/
+                fetchNewGCMEndpointAsyncTaskObject().execute(context);
             }
         };
 
         /** Bind with view animator **/
         viewAnimator.setOnClickListener(onClickListener);
 
-        /** Initial Update Fragment **/
-        updateJokeInFragment();
+        /** Need to execute GCM module initially once **/
+        fetchNewGCMEndpointAsyncTaskObject().execute(context);
+    }
+
+    /**
+     * Creates a {@link GCMEndpointAsyncTask} object, along with
+     * implementation of its callback interface.
+     *
+     * @return {@link GCMEndpointAsyncTask} object
+     */
+    private GCMEndpointAsyncTask fetchNewGCMEndpointAsyncTaskObject(){
+        GCMEndpointAsyncTask gcmEndpointAsyncTask = new GCMEndpointAsyncTask();
+        gcmEndpointAsyncTask.setFetchComplete(new GCMEndpointAsyncTask.FetchComplete() {
+            @Override
+            public void gotTheJoke(String Joke) {
+
+                /** Need to set joke in intent of the activity **/
+                Util.setJokeInIntentExtras(context, Joke);
+
+                /** Hides the loading animation and sets joke in fragment container **/
+                updateJokeInFragment();
+            }
+        });
+
+        return gcmEndpointAsyncTask;
     }
 }

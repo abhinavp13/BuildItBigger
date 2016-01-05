@@ -10,10 +10,26 @@
 
     <com.pabhinav.bib.jokesupplyandroidlibrary.RobotoTextView
         android:id="@+id/text_view_card_two"
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/jokeTextStyle"
         app:font="Roboto-Light.ttf"
         android:text="This is a Joke 2"/>
 
+    <com.pabhinav.bib.jokesupplyandroidlibrary.RobotoTextView
+        android:id="@+id/plz_wait_text_view_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/jokeTextStyle"
+        android:textColor="@color/green"
+        android:text="Plz...Wait...Loading...Unloading...Joke"
+        />
+
+    <ImageView
+        android:id="@+id/truck_image_view_two"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:gravity="center"
+        android:layout_gravity="center" />
 </LinearLayout>

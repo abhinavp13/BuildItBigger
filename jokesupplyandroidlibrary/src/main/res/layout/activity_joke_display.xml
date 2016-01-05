@@ -78,21 +78,21 @@
 
     </ViewFlipper>
 
-    <com.pabhinav.bib.jokesupplyandroidlibrary.RobotoTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/green"
-        android:layout_centerHorizontal="true"
-        android:text="Plz Wait...Loading...Unloading...Joke"
-        android:layout_below="@+id/view_flipper"
-        />
+    <!--<com.pabhinav.bib.jokesupplyandroidlibrary.RobotoTextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textColor="@color/green"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:text="Plz Wait...Loading...Unloading...Joke"-->
+        <!--android:layout_below="@+id/view_flipper"-->
+        <!--/>-->
 
-    <ImageView
-        android:id="@+id/truck_image_view"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/view_flipper"/>
+    <!--<ImageView-->
+        <!--android:id="@+id/truck_image_view"-->
+        <!--android:layout_width="75dp"-->
+        <!--android:layout_height="75dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_below="@+id/view_flipper"/>-->
 
     <Button
         android:id="@+id/got_button"

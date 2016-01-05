@@ -36,8 +36,6 @@ public class JokeDisplay extends FragmentActivity {
 
         /** Set the main content layout **/
         setContentView(R.layout.activity_joke_display);
-
-        // TODO : Splash Screen ...
     }
 
     /**

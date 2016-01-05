@@ -39,11 +39,11 @@ public class HintCover {
      *
      * @param context
      */
-    public HintCover(Context context){
+    public HintCover(Context context) {
         this.context = context;
-        coverView = (View)((Activity)context).findViewById(R.id.cover_view);
-        tapTextView = (TextView)((Activity)context).findViewById(R.id.tapTextView);
-        gotButton = (Button)((Activity)context).findViewById(R.id.got_button);
+        coverView = (View) ((Activity) context).findViewById(R.id.cover_view);
+        tapTextView = (TextView) ((Activity) context).findViewById(R.id.tapTextView);
+        gotButton = (Button) ((Activity) context).findViewById(R.id.got_button);
     }
 
     /**
@@ -62,6 +62,21 @@ public class HintCover {
         gotButton.setVisibility(View.VISIBLE);
         tapTextView.setVisibility(View.VISIBLE);
         coverView.setVisibility(View.VISIBLE);
+    }
+
+    /**
+     * Checks for Visibility of hint cover.
+     * if it is visible, returns false, since they are not hidden,
+     * else, returns true.
+     *
+     * @return ~visibility
+     */
+    public boolean isHidden(){
+        /** only one view check is sufficient **/
+        if(gotButton.getVisibility() == View.VISIBLE){
+            return false;
+        }
+        return true;
     }
 
 }

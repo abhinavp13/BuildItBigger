@@ -50,10 +50,10 @@ public abstract class FlipAnimationHelper {
 
         /** if true, update fragment one and make it false, and vice versa. **/
         if(toggleRefresh) {
-            updateFragmentOne();
+            updateFragmentOneWithJoke();
             toggleRefresh = false;
         } else {
-            updateFragmentTwo();
+            updateFragmentTwoWithJoke();
             toggleRefresh = true;
         }
     }
@@ -61,7 +61,7 @@ public abstract class FlipAnimationHelper {
     /**
      * This method updates {@link JokeFragmentCardOne}, by calling its {@code setJoke} method.
      */
-    private void updateFragmentOne(){
+    private void updateFragmentOneWithJoke(){
         Fragment fragment_one = ((FragmentActivity) context).getSupportFragmentManager()
                 .findFragmentById(R.id.fragment_one);
         if (fragment_one instanceof JokeFragmentCardOne) {
@@ -72,11 +72,48 @@ public abstract class FlipAnimationHelper {
     /**
      * This method updates {@link JokeFragmentCardTwo}, by calling its {@code setJoke} method.
      */
-    private void updateFragmentTwo(){
+    private void updateFragmentTwoWithJoke(){
         Fragment fragment_two = ((FragmentActivity) context).getSupportFragmentManager()
                 .findFragmentById(R.id.fragment_two);
         if (fragment_two instanceof JokeFragmentCardTwo) {
             ((JokeFragmentCardTwo) fragment_two).setJoke();
+        }
+    }
+
+    /**
+     * This method is used to update fragment with loading animation.
+     * Decides based on {@code toggleRefresh}, whether to update loading
+     * animation in {@link JokeFragmentCardOne} or {@link JokeFragmentCardTwo}.
+     */
+    protected void updateLoadingAnimationInFragment() {
+
+        /** if true, update fragment one, and vice versa. **/
+        if(toggleRefresh) {
+            updateFragmentOneWithLoadingAnimation();
+        } else {
+            updateFragmentTwoWithLoadingAnimation();
+        }
+    }
+
+    /**
+     * This method updates {@link JokeFragmentCardOne}, by calling its {@code displayLoading} method.
+     */
+    private void updateFragmentOneWithLoadingAnimation(){
+        Fragment fragment_one = ((FragmentActivity) context).getSupportFragmentManager()
+                .findFragmentById(R.id.fragment_one);
+        if (fragment_one instanceof JokeFragmentCardOne) {
+            ((JokeFragmentCardOne) fragment_one).displayLoading();
+        }
+    }
+
+    /**
+     * This method updates {@link JokeFragmentCardTwo}, by calling its {@code displayLoading} method.
+     */
+    private void updateFragmentTwoWithLoadingAnimation(){
+        Fragment fragment_two = ((FragmentActivity) context).getSupportFragmentManager()
+                .findFragmentById(R.id.fragment_two);
+        if (fragment_two instanceof JokeFragmentCardTwo) {
+            ((JokeFragmentCardTwo) fragment_two).displayLoading();
         }
     }
 }

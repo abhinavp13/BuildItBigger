@@ -2,7 +2,6 @@ package com.pabhinav.bib.builditbigger;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.widget.Toast;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
@@ -30,6 +29,11 @@ public class GCMEndpointAsyncTask extends AsyncTask<Context, Void, String> {
      */
     private Context context;
 
+    /**
+     * Callback Interface.
+     */
+    private FetchComplete fetchComplete;
+
     @Override
     protected String doInBackground(Context... params) {
 
@@ -52,6 +56,24 @@ public class GCMEndpointAsyncTask extends AsyncTask<Context, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-        Toast.makeText(context, result, Toast.LENGTH_LONG).show();
+
+        /** Callback to super class telling that now we have the joke **/
+        fetchComplete.gotTheJoke(result);
+    }
+
+    /**
+     * Setter method for callback interface
+     *
+     * @param fetchComplete
+     */
+    public void setFetchComplete(FetchComplete fetchComplete){
+        this.fetchComplete = fetchComplete;
+    }
+
+    /**
+     * Callback Interface.
+     */
+    interface FetchComplete{
+        void gotTheJoke(String Joke);
     }
 }
