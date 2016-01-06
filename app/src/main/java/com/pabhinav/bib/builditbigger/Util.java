@@ -3,9 +3,6 @@ package com.pabhinav.bib.builditbigger;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.view.View;
-
-import com.pabhinav.JokeSupply;
 
 /**
  * Common Utilities Functions.
@@ -31,14 +28,14 @@ public class Util {
     public static void setJokeInIntentExtras(Context context){
 
         /** Joke Supply java lib **/
-        JokeSupply jokeSupply = new JokeSupply();
+        //JokeSupply jokeSupply = new JokeSupply();
 
         /** Call lib function for providing joke **/
-        String Joke = jokeSupply.tellMeJoke();
+        //String Joke = jokeSupply.tellMeJoke();
 
         /** Put extra intent value **/
-        Intent i = ((Activity)context).getIntent();
-        i.putExtra(((Activity)context).getResources().getString(R.string.joke_fetching_key),Joke);
+        //Intent i = ((Activity)context).getIntent();
+        //i.putExtra(((Activity)context).getResources().getString(R.string.joke_fetching_key),Joke);
     }
 
     /**

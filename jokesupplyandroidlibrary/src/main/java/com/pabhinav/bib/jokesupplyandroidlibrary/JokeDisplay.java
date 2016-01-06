@@ -33,9 +33,6 @@ public class JokeDisplay extends FragmentActivity {
 
         /** Set status bar color  **/
         setStatusBarColor();
-
-        /** Set the main content layout **/
-        setContentView(R.layout.activity_joke_display);
     }
 
     /**
