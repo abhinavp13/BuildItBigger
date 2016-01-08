@@ -1,1 +1,1 @@
-include ':app', ':jokesupplylibrary', ':jokesupplyandroidlibrary', ':gcm'
+include ':app', ':jokesupplylibrary', ':jokesupplyandroidlibrary', ':gce'

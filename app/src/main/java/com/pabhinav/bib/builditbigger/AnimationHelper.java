@@ -73,14 +73,14 @@ public class AnimationHelper extends FlipAnimationHelper {
     }
 
     /**
-     * Creates a {@link GCMEndpointAsyncTask} object, along with
+     * Creates a {@link GCEEndpointAsyncTask} object, along with
      * implementation of its callback interface.
      *
-     * @return {@link GCMEndpointAsyncTask} object
+     * @return {@link GCEEndpointAsyncTask} object
      */
-    private GCMEndpointAsyncTask fetchNewGCMEndpointAsyncTaskObject(){
-        GCMEndpointAsyncTask gcmEndpointAsyncTask = new GCMEndpointAsyncTask();
-        gcmEndpointAsyncTask.setFetchComplete(new GCMEndpointAsyncTask.FetchComplete() {
+    private GCEEndpointAsyncTask fetchNewGCMEndpointAsyncTaskObject(){
+        GCEEndpointAsyncTask GCEEndpointAsyncTask = new GCEEndpointAsyncTask();
+        GCEEndpointAsyncTask.setFetchComplete(new GCEEndpointAsyncTask.FetchComplete() {
             @Override
             public void gotTheJoke(String Joke) {
 
@@ -92,6 +92,6 @@ public class AnimationHelper extends FlipAnimationHelper {
             }
         });
 
-        return gcmEndpointAsyncTask;
+        return GCEEndpointAsyncTask;
     }
 }

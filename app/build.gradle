@@ -1,15 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
 
     defaultConfig {
         applicationId "com.pabhinav.bib.builditbigger"
         minSdkVersion 14
-        targetSdkVersion 22
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -29,11 +32,23 @@ android {
     }
 }
 
+// Need to resolve conflicts, all conflicts forced to lower version.
+configurations.all{
+    resolutionStrategy.force 'com.android.support:support-annotations:22.2.1'
+    resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:support-annotations:23.0.1'
+    compile 'org.hamcrest:hamcrest-core:1.3'
     testCompile 'junit:junit:4.12'
     compile project(':jokesupplyandroidlibrary')
     freeCompile 'com.google.android.gms:play-services:7.3.0'
     compile 'com.jakewharton:butterknife:7.0.1'
-    compile project(path: ':gcm', configuration: 'android-endpoints')
+    compile project(path: ':gce', configuration: 'android-endpoints')
+    androidTestCompile 'com.android.support:support-annotations:23.0.1'
+    androidTestCompile 'com.android.support.test:runner:0.4.1'
+    androidTestCompile 'com.android.support.test:rules:0.4.1'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
 }

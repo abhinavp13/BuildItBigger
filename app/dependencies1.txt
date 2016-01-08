@@ -1,0 +1,862 @@
+:app:dependencies
+
+------------------------------------------------------------
+Project :app
+------------------------------------------------------------
+
+_freeDebugAndroidTestApk - ## Internal use, do not manually configure ##
++--- com.android.support:multidex-instrumentation:1.0.1
+|    \--- com.android.support:multidex:1.0.1
++--- com.android.support:support-annotations:23.0.1 -> 22.2.1
++--- com.android.support.test:runner:0.4.1
+|    +--- com.android.support.test:exposed-instrumentation-api-publish:0.4.1
+|    +--- com.android.support:support-annotations:23.0.1 -> 22.2.1
+|    \--- junit:junit:4.12
+|         \--- org.hamcrest:hamcrest-core:1.3
++--- com.android.support.test:rules:0.4.1
+|    \--- com.android.support.test:runner:0.4.1 (*)
+\--- com.android.support.test.espresso:espresso-core:2.2.1
+     +--- com.squareup:javawriter:2.1.1
+     +--- com.android.support.test:runner:0.4.1 (*)
+     +--- com.android.support.test:rules:0.4.1 (*)
+     +--- javax.inject:javax.inject:1
+     +--- org.hamcrest:hamcrest-library:1.3
+     |    \--- org.hamcrest:hamcrest-core:1.3
+     +--- org.hamcrest:hamcrest-integration:1.3
+     |    \--- org.hamcrest:hamcrest-library:1.3 (*)
+     +--- com.google.code.findbugs:jsr305:2.0.1 -> 1.3.9
+     +--- javax.annotation:javax.annotation-api:1.2
+     \--- com.android.support.test.espresso:espresso-idling-resource:2.2.1
+
+_freeDebugAndroidTestCompile - ## Internal use, do not manually configure ##
++--- com.android.support:multidex-instrumentation:1.0.1
+|    \--- com.android.support:multidex:1.0.1
++--- com.android.support:support-annotations:23.0.1 -> 22.2.1
++--- com.android.support.test:runner:0.4.1
+|    +--- com.android.support.test:exposed-instrumentation-api-publish:0.4.1
+|    +--- com.android.support:support-annotations:23.0.1 -> 22.2.1
+|    \--- junit:junit:4.12
+|         \--- org.hamcrest:hamcrest-core:1.3
++--- com.android.support.test:rules:0.4.1
+|    \--- com.android.support.test:runner:0.4.1 (*)
+\--- com.android.support.test.espresso:espresso-core:2.2.1
+     +--- com.squareup:javawriter:2.1.1
+     +--- com.android.support.test:runner:0.4.1 (*)
+     +--- com.android.support.test:rules:0.4.1 (*)
+     +--- javax.inject:javax.inject:1
+     +--- org.hamcrest:hamcrest-library:1.3
+     |    \--- org.hamcrest:hamcrest-core:1.3
+     +--- org.hamcrest:hamcrest-integration:1.3
+     |    \--- org.hamcrest:hamcrest-library:1.3 (*)
+     +--- com.google.code.findbugs:jsr305:2.0.1 -> 1.3.9
+     +--- javax.annotation:javax.annotation-api:1.2
+     \--- com.android.support.test.espresso:espresso-idling-resource:2.2.1
+
+_freeDebugApk - ## Internal use, do not manually configure ##
++--- com.android.support:multidex:1.0.1
++--- com.android.support:support-annotations:23.0.1 -> 22.2.1
++--- project :jokesupplyandroidlibrary
+|    \--- com.android.support:appcompat-v7:22.2.1
+|         \--- com.android.support:support-v4:22.2.1
+|              \--- com.android.support:support-annotations:22.2.1
++--- com.jakewharton:butterknife:7.0.1
++--- project :gce
+|    \--- com.google.api-client:google-api-client-android:1.19.0
+|         +--- com.google.api-client:google-api-client:1.19.0
+|         |    +--- com.google.oauth-client:google-oauth-client:1.19.0
+|         |    |    +--- com.google.http-client:google-http-client:1.19.0
+|         |    |    |    \--- com.google.code.findbugs:jsr305:1.3.9
+|         |    |    \--- com.google.code.findbugs:jsr305:1.3.9
+|         |    +--- com.google.http-client:google-http-client-jackson2:1.19.0
+|         |    |    +--- com.google.http-client:google-http-client:1.19.0 (*)
+|         |    |    \--- com.fasterxml.jackson.core:jackson-core:2.1.3
+|         |    \--- com.google.guava:guava-jdk5:13.0
+|         \--- com.google.http-client:google-http-client-android:1.19.0
+|              \--- com.google.http-client:google-http-client:1.19.0 (*)
+\--- com.google.android.gms:play-services:7.3.0
+     +--- com.google.android.gms:play-services-ads:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0
+     |    |    \--- com.android.support:support-v4:22.0.0 -> 22.2.1 (*)
+     |    \--- com.google.android.gms:play-services-analytics:7.3.0
+     |         \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-analytics:7.3.0 (*)
+     +--- com.google.android.gms:play-services-appindexing:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-appinvite:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-appstate:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-cast:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-drive:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-fitness:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |    \--- com.google.android.gms:play-services-location:7.3.0
+     |         +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |         \--- com.google.android.gms:play-services-maps:7.3.0
+     |              \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-games:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |    \--- com.google.android.gms:play-services-drive:7.3.0 (*)
+     +--- com.google.android.gms:play-services-gcm:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-identity:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-location:7.3.0 (*)
+     +--- com.google.android.gms:play-services-maps:7.3.0 (*)
+     +--- com.google.android.gms:play-services-nearby:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-panorama:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-plus:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-safetynet:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-wallet:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |    +--- com.google.android.gms:play-services-identity:7.3.0 (*)
+     |    \--- com.google.android.gms:play-services-maps:7.3.0 (*)
+     \--- com.google.android.gms:play-services-wearable:7.3.0
+          \--- com.google.android.gms:play-services-base:7.3.0 (*)
+
+_freeDebugCompile - ## Internal use, do not manually configure ##
++--- com.android.support:multidex:1.0.1
++--- com.android.support:support-annotations:23.0.1 -> 22.2.1
++--- project :jokesupplyandroidlibrary
+|    \--- com.android.support:appcompat-v7:22.2.1
+|         \--- com.android.support:support-v4:22.2.1
+|              \--- com.android.support:support-annotations:22.2.1
++--- com.jakewharton:butterknife:7.0.1
++--- project :gce
+|    \--- com.google.api-client:google-api-client-android:1.19.0
+|         +--- com.google.api-client:google-api-client:1.19.0
+|         |    +--- com.google.oauth-client:google-oauth-client:1.19.0
+|         |    |    +--- com.google.http-client:google-http-client:1.19.0
+|         |    |    |    \--- com.google.code.findbugs:jsr305:1.3.9
+|         |    |    \--- com.google.code.findbugs:jsr305:1.3.9
+|         |    +--- com.google.http-client:google-http-client-jackson2:1.19.0
+|         |    |    +--- com.google.http-client:google-http-client:1.19.0 (*)
+|         |    |    \--- com.fasterxml.jackson.core:jackson-core:2.1.3
+|         |    \--- com.google.guava:guava-jdk5:13.0
+|         \--- com.google.http-client:google-http-client-android:1.19.0
+|              \--- com.google.http-client:google-http-client:1.19.0 (*)
+\--- com.google.android.gms:play-services:7.3.0
+     +--- com.google.android.gms:play-services-ads:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0
+     |    |    \--- com.android.support:support-v4:22.0.0 -> 22.2.1 (*)
+     |    \--- com.google.android.gms:play-services-analytics:7.3.0
+     |         \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-analytics:7.3.0 (*)
+     +--- com.google.android.gms:play-services-appindexing:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-appinvite:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-appstate:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-cast:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-drive:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-fitness:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |    \--- com.google.android.gms:play-services-location:7.3.0
+     |         +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |         \--- com.google.android.gms:play-services-maps:7.3.0
+     |              \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-games:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |    \--- com.google.android.gms:play-services-drive:7.3.0 (*)
+     +--- com.google.android.gms:play-services-gcm:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-identity:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-location:7.3.0 (*)
+     +--- com.google.android.gms:play-services-maps:7.3.0 (*)
+     +--- com.google.android.gms:play-services-nearby:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-panorama:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-plus:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-safetynet:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-wallet:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |    +--- com.google.android.gms:play-services-identity:7.3.0 (*)
+     |    \--- com.google.android.gms:play-services-maps:7.3.0 (*)
+     \--- com.google.android.gms:play-services-wearable:7.3.0
+          \--- com.google.android.gms:play-services-base:7.3.0 (*)
+
+_freeDebugUnitTestApk - ## Internal use, do not manually configure ##
+\--- junit:junit:4.12
+     \--- org.hamcrest:hamcrest-core:1.3
+
+_freeDebugUnitTestCompile - ## Internal use, do not manually configure ##
+\--- junit:junit:4.12
+     \--- org.hamcrest:hamcrest-core:1.3
+
+_freeReleaseApk - ## Internal use, do not manually configure ##
++--- com.android.support:multidex:1.0.1
++--- com.android.support:support-annotations:23.0.1 -> 22.2.1
++--- project :jokesupplyandroidlibrary
+|    \--- com.android.support:appcompat-v7:22.2.1
+|         \--- com.android.support:support-v4:22.2.1
+|              \--- com.android.support:support-annotations:22.2.1
++--- com.jakewharton:butterknife:7.0.1
++--- project :gce
+|    \--- com.google.api-client:google-api-client-android:1.19.0
+|         +--- com.google.api-client:google-api-client:1.19.0
+|         |    +--- com.google.oauth-client:google-oauth-client:1.19.0
+|         |    |    +--- com.google.http-client:google-http-client:1.19.0
+|         |    |    |    \--- com.google.code.findbugs:jsr305:1.3.9
+|         |    |    \--- com.google.code.findbugs:jsr305:1.3.9
+|         |    +--- com.google.http-client:google-http-client-jackson2:1.19.0
+|         |    |    +--- com.google.http-client:google-http-client:1.19.0 (*)
+|         |    |    \--- com.fasterxml.jackson.core:jackson-core:2.1.3
+|         |    \--- com.google.guava:guava-jdk5:13.0
+|         \--- com.google.http-client:google-http-client-android:1.19.0
+|              \--- com.google.http-client:google-http-client:1.19.0 (*)
+\--- com.google.android.gms:play-services:7.3.0
+     +--- com.google.android.gms:play-services-ads:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0
+     |    |    \--- com.android.support:support-v4:22.0.0 -> 22.2.1 (*)
+     |    \--- com.google.android.gms:play-services-analytics:7.3.0
+     |         \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-analytics:7.3.0 (*)
+     +--- com.google.android.gms:play-services-appindexing:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-appinvite:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-appstate:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-cast:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-drive:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-fitness:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |    \--- com.google.android.gms:play-services-location:7.3.0
+     |         +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |         \--- com.google.android.gms:play-services-maps:7.3.0
+     |              \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-games:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |    \--- com.google.android.gms:play-services-drive:7.3.0 (*)
+     +--- com.google.android.gms:play-services-gcm:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-identity:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-location:7.3.0 (*)
+     +--- com.google.android.gms:play-services-maps:7.3.0 (*)
+     +--- com.google.android.gms:play-services-nearby:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-panorama:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-plus:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-safetynet:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-wallet:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |    +--- com.google.android.gms:play-services-identity:7.3.0 (*)
+     |    \--- com.google.android.gms:play-services-maps:7.3.0 (*)
+     \--- com.google.android.gms:play-services-wearable:7.3.0
+          \--- com.google.android.gms:play-services-base:7.3.0 (*)
+
+_freeReleaseCompile - ## Internal use, do not manually configure ##
++--- com.android.support:multidex:1.0.1
++--- com.android.support:support-annotations:23.0.1 -> 22.2.1
++--- project :jokesupplyandroidlibrary
+|    \--- com.android.support:appcompat-v7:22.2.1
+|         \--- com.android.support:support-v4:22.2.1
+|              \--- com.android.support:support-annotations:22.2.1
++--- com.jakewharton:butterknife:7.0.1
++--- project :gce
+|    \--- com.google.api-client:google-api-client-android:1.19.0
+|         +--- com.google.api-client:google-api-client:1.19.0
+|         |    +--- com.google.oauth-client:google-oauth-client:1.19.0
+|         |    |    +--- com.google.http-client:google-http-client:1.19.0
+|         |    |    |    \--- com.google.code.findbugs:jsr305:1.3.9
+|         |    |    \--- com.google.code.findbugs:jsr305:1.3.9
+|         |    +--- com.google.http-client:google-http-client-jackson2:1.19.0
+|         |    |    +--- com.google.http-client:google-http-client:1.19.0 (*)
+|         |    |    \--- com.fasterxml.jackson.core:jackson-core:2.1.3
+|         |    \--- com.google.guava:guava-jdk5:13.0
+|         \--- com.google.http-client:google-http-client-android:1.19.0
+|              \--- com.google.http-client:google-http-client:1.19.0 (*)
+\--- com.google.android.gms:play-services:7.3.0
+     +--- com.google.android.gms:play-services-ads:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0
+     |    |    \--- com.android.support:support-v4:22.0.0 -> 22.2.1 (*)
+     |    \--- com.google.android.gms:play-services-analytics:7.3.0
+     |         \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-analytics:7.3.0 (*)
+     +--- com.google.android.gms:play-services-appindexing:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-appinvite:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-appstate:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-cast:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-drive:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-fitness:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |    \--- com.google.android.gms:play-services-location:7.3.0
+     |         +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |         \--- com.google.android.gms:play-services-maps:7.3.0
+     |              \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-games:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |    \--- com.google.android.gms:play-services-drive:7.3.0 (*)
+     +--- com.google.android.gms:play-services-gcm:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-identity:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-location:7.3.0 (*)
+     +--- com.google.android.gms:play-services-maps:7.3.0 (*)
+     +--- com.google.android.gms:play-services-nearby:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-panorama:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-plus:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-safetynet:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-wallet:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |    +--- com.google.android.gms:play-services-identity:7.3.0 (*)
+     |    \--- com.google.android.gms:play-services-maps:7.3.0 (*)
+     \--- com.google.android.gms:play-services-wearable:7.3.0
+          \--- com.google.android.gms:play-services-base:7.3.0 (*)
+
+_freeReleaseUnitTestApk - ## Internal use, do not manually configure ##
+\--- junit:junit:4.12
+     \--- org.hamcrest:hamcrest-core:1.3
+
+_freeReleaseUnitTestCompile - ## Internal use, do not manually configure ##
+\--- junit:junit:4.12
+     \--- org.hamcrest:hamcrest-core:1.3
+
+_paidDebugAndroidTestApk - ## Internal use, do not manually configure ##
++--- com.android.support:multidex-instrumentation:1.0.1
+|    \--- com.android.support:multidex:1.0.1
++--- com.android.support:support-annotations:23.0.1 -> 22.2.1
++--- com.android.support.test:runner:0.4.1
+|    +--- com.android.support.test:exposed-instrumentation-api-publish:0.4.1
+|    +--- com.android.support:support-annotations:23.0.1 -> 22.2.1
+|    \--- junit:junit:4.12
+|         \--- org.hamcrest:hamcrest-core:1.3
++--- com.android.support.test:rules:0.4.1
+|    \--- com.android.support.test:runner:0.4.1 (*)
+\--- com.android.support.test.espresso:espresso-core:2.2.1
+     +--- com.squareup:javawriter:2.1.1
+     +--- com.android.support.test:runner:0.4.1 (*)
+     +--- com.android.support.test:rules:0.4.1 (*)
+     +--- javax.inject:javax.inject:1
+     +--- org.hamcrest:hamcrest-library:1.3
+     |    \--- org.hamcrest:hamcrest-core:1.3
+     +--- org.hamcrest:hamcrest-integration:1.3
+     |    \--- org.hamcrest:hamcrest-library:1.3 (*)
+     +--- com.google.code.findbugs:jsr305:2.0.1 -> 1.3.9
+     +--- javax.annotation:javax.annotation-api:1.2
+     \--- com.android.support.test.espresso:espresso-idling-resource:2.2.1
+
+_paidDebugAndroidTestCompile - ## Internal use, do not manually configure ##
++--- com.android.support:multidex-instrumentation:1.0.1
+|    \--- com.android.support:multidex:1.0.1
++--- com.android.support:support-annotations:23.0.1 -> 22.2.1
++--- com.android.support.test:runner:0.4.1
+|    +--- com.android.support.test:exposed-instrumentation-api-publish:0.4.1
+|    +--- com.android.support:support-annotations:23.0.1 -> 22.2.1
+|    \--- junit:junit:4.12
+|         \--- org.hamcrest:hamcrest-core:1.3
++--- com.android.support.test:rules:0.4.1
+|    \--- com.android.support.test:runner:0.4.1 (*)
+\--- com.android.support.test.espresso:espresso-core:2.2.1
+     +--- com.squareup:javawriter:2.1.1
+     +--- com.android.support.test:runner:0.4.1 (*)
+     +--- com.android.support.test:rules:0.4.1 (*)
+     +--- javax.inject:javax.inject:1
+     +--- org.hamcrest:hamcrest-library:1.3
+     |    \--- org.hamcrest:hamcrest-core:1.3
+     +--- org.hamcrest:hamcrest-integration:1.3
+     |    \--- org.hamcrest:hamcrest-library:1.3 (*)
+     +--- com.google.code.findbugs:jsr305:2.0.1 -> 1.3.9
+     +--- javax.annotation:javax.annotation-api:1.2
+     \--- com.android.support.test.espresso:espresso-idling-resource:2.2.1
+
+_paidDebugApk - ## Internal use, do not manually configure ##
++--- com.android.support:multidex:1.0.1
++--- com.android.support:support-annotations:23.0.1 -> 22.2.1
++--- project :jokesupplyandroidlibrary
+|    \--- com.android.support:appcompat-v7:22.2.1
+|         \--- com.android.support:support-v4:22.2.1
+|              \--- com.android.support:support-annotations:22.2.1
++--- com.jakewharton:butterknife:7.0.1
+\--- project :gce
+     \--- com.google.api-client:google-api-client-android:1.19.0
+          +--- com.google.api-client:google-api-client:1.19.0
+          |    +--- com.google.oauth-client:google-oauth-client:1.19.0
+          |    |    +--- com.google.http-client:google-http-client:1.19.0
+          |    |    |    \--- com.google.code.findbugs:jsr305:1.3.9
+          |    |    \--- com.google.code.findbugs:jsr305:1.3.9
+          |    +--- com.google.http-client:google-http-client-jackson2:1.19.0
+          |    |    +--- com.google.http-client:google-http-client:1.19.0 (*)
+          |    |    \--- com.fasterxml.jackson.core:jackson-core:2.1.3
+          |    \--- com.google.guava:guava-jdk5:13.0
+          \--- com.google.http-client:google-http-client-android:1.19.0
+               \--- com.google.http-client:google-http-client:1.19.0 (*)
+
+_paidDebugCompile - ## Internal use, do not manually configure ##
++--- com.android.support:multidex:1.0.1
++--- com.android.support:support-annotations:23.0.1 -> 22.2.1
++--- project :jokesupplyandroidlibrary
+|    \--- com.android.support:appcompat-v7:22.2.1
+|         \--- com.android.support:support-v4:22.2.1
+|              \--- com.android.support:support-annotations:22.2.1
++--- com.jakewharton:butterknife:7.0.1
+\--- project :gce
+     \--- com.google.api-client:google-api-client-android:1.19.0
+          +--- com.google.api-client:google-api-client:1.19.0
+          |    +--- com.google.oauth-client:google-oauth-client:1.19.0
+          |    |    +--- com.google.http-client:google-http-client:1.19.0
+          |    |    |    \--- com.google.code.findbugs:jsr305:1.3.9
+          |    |    \--- com.google.code.findbugs:jsr305:1.3.9
+          |    +--- com.google.http-client:google-http-client-jackson2:1.19.0
+          |    |    +--- com.google.http-client:google-http-client:1.19.0 (*)
+          |    |    \--- com.fasterxml.jackson.core:jackson-core:2.1.3
+          |    \--- com.google.guava:guava-jdk5:13.0
+          \--- com.google.http-client:google-http-client-android:1.19.0
+               \--- com.google.http-client:google-http-client:1.19.0 (*)
+
+_paidDebugUnitTestApk - ## Internal use, do not manually configure ##
+\--- junit:junit:4.12
+     \--- org.hamcrest:hamcrest-core:1.3
+
+_paidDebugUnitTestCompile - ## Internal use, do not manually configure ##
+\--- junit:junit:4.12
+     \--- org.hamcrest:hamcrest-core:1.3
+
+_paidReleaseApk - ## Internal use, do not manually configure ##
++--- com.android.support:multidex:1.0.1
++--- com.android.support:support-annotations:23.0.1 -> 22.2.1
++--- project :jokesupplyandroidlibrary
+|    \--- com.android.support:appcompat-v7:22.2.1
+|         \--- com.android.support:support-v4:22.2.1
+|              \--- com.android.support:support-annotations:22.2.1
++--- com.jakewharton:butterknife:7.0.1
+\--- project :gce
+     \--- com.google.api-client:google-api-client-android:1.19.0
+          +--- com.google.api-client:google-api-client:1.19.0
+          |    +--- com.google.oauth-client:google-oauth-client:1.19.0
+          |    |    +--- com.google.http-client:google-http-client:1.19.0
+          |    |    |    \--- com.google.code.findbugs:jsr305:1.3.9
+          |    |    \--- com.google.code.findbugs:jsr305:1.3.9
+          |    +--- com.google.http-client:google-http-client-jackson2:1.19.0
+          |    |    +--- com.google.http-client:google-http-client:1.19.0 (*)
+          |    |    \--- com.fasterxml.jackson.core:jackson-core:2.1.3
+          |    \--- com.google.guava:guava-jdk5:13.0
+          \--- com.google.http-client:google-http-client-android:1.19.0
+               \--- com.google.http-client:google-http-client:1.19.0 (*)
+
+_paidReleaseCompile - ## Internal use, do not manually configure ##
++--- com.android.support:multidex:1.0.1
++--- com.android.support:support-annotations:23.0.1 -> 22.2.1
++--- project :jokesupplyandroidlibrary
+|    \--- com.android.support:appcompat-v7:22.2.1
+|         \--- com.android.support:support-v4:22.2.1
+|              \--- com.android.support:support-annotations:22.2.1
++--- com.jakewharton:butterknife:7.0.1
+\--- project :gce
+     \--- com.google.api-client:google-api-client-android:1.19.0
+          +--- com.google.api-client:google-api-client:1.19.0
+          |    +--- com.google.oauth-client:google-oauth-client:1.19.0
+          |    |    +--- com.google.http-client:google-http-client:1.19.0
+          |    |    |    \--- com.google.code.findbugs:jsr305:1.3.9
+          |    |    \--- com.google.code.findbugs:jsr305:1.3.9
+          |    +--- com.google.http-client:google-http-client-jackson2:1.19.0
+          |    |    +--- com.google.http-client:google-http-client:1.19.0 (*)
+          |    |    \--- com.fasterxml.jackson.core:jackson-core:2.1.3
+          |    \--- com.google.guava:guava-jdk5:13.0
+          \--- com.google.http-client:google-http-client-android:1.19.0
+               \--- com.google.http-client:google-http-client:1.19.0 (*)
+
+_paidReleaseUnitTestApk - ## Internal use, do not manually configure ##
+\--- junit:junit:4.12
+     \--- org.hamcrest:hamcrest-core:1.3
+
+_paidReleaseUnitTestCompile - ## Internal use, do not manually configure ##
+\--- junit:junit:4.12
+     \--- org.hamcrest:hamcrest-core:1.3
+
+androidJacocoAgent - The Jacoco agent to use to get coverage data.
+\--- org.jacoco:org.jacoco.agent:0.7.4.201502262128
+
+androidJacocoAnt - The Jacoco ant tasks to use to get execute Gradle tasks.
+\--- org.jacoco:org.jacoco.ant:0.7.4.201502262128
+     +--- org.jacoco:org.jacoco.core:0.7.4.201502262128
+     |    \--- org.ow2.asm:asm-debug-all:5.0.1
+     +--- org.jacoco:org.jacoco.report:0.7.4.201502262128
+     |    +--- org.jacoco:org.jacoco.core:0.7.4.201502262128 (*)
+     |    \--- org.ow2.asm:asm-debug-all:5.0.1
+     \--- org.jacoco:org.jacoco.agent:0.7.4.201502262128
+
+androidTestApk - Classpath packaged with the compiled 'androidTest' classes.
+No dependencies
+
+androidTestCompile - Classpath for compiling the androidTest sources.
++--- com.android.support:support-annotations:23.0.1 -> 22.2.1
++--- com.android.support.test:runner:0.4.1
+|    +--- com.android.support.test:exposed-instrumentation-api-publish:0.4.1
+|    +--- com.android.support:support-annotations:23.0.1 -> 22.2.1
+|    \--- junit:junit:4.12
+|         \--- org.hamcrest:hamcrest-core:1.3
++--- com.android.support.test:rules:0.4.1
+|    \--- com.android.support.test:runner:0.4.1 (*)
+\--- com.android.support.test.espresso:espresso-core:2.2.1
+     +--- com.squareup:javawriter:2.1.1
+     +--- com.android.support.test:runner:0.4.1 (*)
+     +--- com.android.support.test:rules:0.4.1 (*)
+     +--- javax.inject:javax.inject:1
+     +--- org.hamcrest:hamcrest-library:1.3
+     |    \--- org.hamcrest:hamcrest-core:1.3
+     +--- org.hamcrest:hamcrest-integration:1.3
+     |    \--- org.hamcrest:hamcrest-library:1.3 (*)
+     +--- com.google.code.findbugs:jsr305:2.0.1 -> 1.3.9
+     +--- javax.annotation:javax.annotation-api:1.2
+     \--- com.android.support.test.espresso:espresso-idling-resource:2.2.1
+
+androidTestFreeApk - Classpath packaged with the compiled 'androidTestFree' classes.
+No dependencies
+
+androidTestFreeCompile - Classpath for compiling the androidTestFree sources.
+No dependencies
+
+androidTestFreeProvided - Classpath for only compiling the androidTestFree sources.
+No dependencies
+
+androidTestFreeWearApp - Link to a wear app to embed for object 'androidTestFree'.
+No dependencies
+
+androidTestPaidApk - Classpath packaged with the compiled 'androidTestPaid' classes.
+No dependencies
+
+androidTestPaidCompile - Classpath for compiling the androidTestPaid sources.
+No dependencies
+
+androidTestPaidProvided - Classpath for only compiling the androidTestPaid sources.
+No dependencies
+
+androidTestPaidWearApp - Link to a wear app to embed for object 'androidTestPaid'.
+No dependencies
+
+androidTestProvided - Classpath for only compiling the androidTest sources.
+No dependencies
+
+androidTestWearApp - Link to a wear app to embed for object 'androidTest'.
+No dependencies
+
+apk - Classpath packaged with the compiled 'main' classes.
+No dependencies
+
+archives - Configuration for archive artifacts.
+No dependencies
+
+compile - Classpath for compiling the main sources.
++--- com.android.support:support-annotations:23.0.1 -> 22.2.1
++--- project :jokesupplyandroidlibrary
+|    \--- com.android.support:appcompat-v7:22.2.1
+|         \--- com.android.support:support-v4:22.2.1
+|              \--- com.android.support:support-annotations:22.2.1
++--- com.jakewharton:butterknife:7.0.1
+\--- project :gce
+     \--- com.google.api-client:google-api-client-android:1.19.0
+          +--- com.google.api-client:google-api-client:1.19.0
+          |    +--- com.google.oauth-client:google-oauth-client:1.19.0
+          |    |    +--- com.google.http-client:google-http-client:1.19.0
+          |    |    |    \--- com.google.code.findbugs:jsr305:1.3.9
+          |    |    \--- com.google.code.findbugs:jsr305:1.3.9
+          |    +--- com.google.http-client:google-http-client-jackson2:1.19.0
+          |    |    +--- com.google.http-client:google-http-client:1.19.0 (*)
+          |    |    \--- com.fasterxml.jackson.core:jackson-core:2.1.3
+          |    \--- com.google.guava:guava-jdk5:13.0
+          \--- com.google.http-client:google-http-client-android:1.19.0
+               \--- com.google.http-client:google-http-client:1.19.0 (*)
+
+debugApk - Classpath packaged with the compiled 'debug' classes.
+No dependencies
+
+debugCompile - Classpath for compiling the debug sources.
+No dependencies
+
+debugProvided - Classpath for only compiling the debug sources.
+No dependencies
+
+debugWearApp - Link to a wear app to embed for object 'debug'.
+No dependencies
+
+default - Configuration for default artifacts.
+No dependencies
+
+default-mapping - Configuration for default mapping artifacts.
+No dependencies
+
+default-metadata - Metadata for the produced APKs.
+No dependencies
+
+freeApk - Classpath packaged with the compiled 'free' classes.
+No dependencies
+
+freeCompile - Classpath for compiling the free sources.
+\--- com.google.android.gms:play-services:7.3.0
+     +--- com.google.android.gms:play-services-ads:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0
+     |    |    \--- com.android.support:support-v4:22.0.0
+     |    |         \--- com.android.support:support-annotations:22.0.0 -> 22.2.1
+     |    \--- com.google.android.gms:play-services-analytics:7.3.0
+     |         \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-analytics:7.3.0 (*)
+     +--- com.google.android.gms:play-services-appindexing:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-appinvite:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-appstate:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-cast:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-drive:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-fitness:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |    \--- com.google.android.gms:play-services-location:7.3.0
+     |         +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |         \--- com.google.android.gms:play-services-maps:7.3.0
+     |              \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-games:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |    \--- com.google.android.gms:play-services-drive:7.3.0 (*)
+     +--- com.google.android.gms:play-services-gcm:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-identity:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-location:7.3.0 (*)
+     +--- com.google.android.gms:play-services-maps:7.3.0 (*)
+     +--- com.google.android.gms:play-services-nearby:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-panorama:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-plus:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-safetynet:7.3.0
+     |    \--- com.google.android.gms:play-services-base:7.3.0 (*)
+     +--- com.google.android.gms:play-services-wallet:7.3.0
+     |    +--- com.google.android.gms:play-services-base:7.3.0 (*)
+     |    +--- com.google.android.gms:play-services-identity:7.3.0 (*)
+     |    \--- com.google.android.gms:play-services-maps:7.3.0 (*)
+     \--- com.google.android.gms:play-services-wearable:7.3.0
+          \--- com.google.android.gms:play-services-base:7.3.0 (*)
+
+freeDebugApk - Classpath packaged with the compiled 'freeDebug' classes.
+No dependencies
+
+freeDebugCompile - Classpath for compiling the freeDebug sources.
+No dependencies
+
+freeDebugProvided - Classpath for only compiling the freeDebug sources.
+No dependencies
+
+freeDebugWearApp - Link to a wear app to embed for object 'freeDebug'.
+No dependencies
+
+freeProvided - Classpath for only compiling the free sources.
+No dependencies
+
+freeReleaseApk - Classpath packaged with the compiled 'freeRelease' classes.
+No dependencies
+
+freeReleaseCompile - Classpath for compiling the freeRelease sources.
+No dependencies
+
+freeReleaseProvided - Classpath for only compiling the freeRelease sources.
+No dependencies
+
+freeReleaseWearApp - Link to a wear app to embed for object 'freeRelease'.
+No dependencies
+
+freeWearApp - Link to a wear app to embed for object 'free'.
+No dependencies
+
+paidApk - Classpath packaged with the compiled 'paid' classes.
+No dependencies
+
+paidCompile - Classpath for compiling the paid sources.
+No dependencies
+
+paidDebugApk - Classpath packaged with the compiled 'paidDebug' classes.
+No dependencies
+
+paidDebugCompile - Classpath for compiling the paidDebug sources.
+No dependencies
+
+paidDebugProvided - Classpath for only compiling the paidDebug sources.
+No dependencies
+
+paidDebugWearApp - Link to a wear app to embed for object 'paidDebug'.
+No dependencies
+
+paidProvided - Classpath for only compiling the paid sources.
+No dependencies
+
+paidReleaseApk - Classpath packaged with the compiled 'paidRelease' classes.
+No dependencies
+
+paidReleaseCompile - Classpath for compiling the paidRelease sources.
+No dependencies
+
+paidReleaseProvided - Classpath for only compiling the paidRelease sources.
+No dependencies
+
+paidReleaseWearApp - Link to a wear app to embed for object 'paidRelease'.
+No dependencies
+
+paidWearApp - Link to a wear app to embed for object 'paid'.
+No dependencies
+
+provided - Classpath for only compiling the main sources.
+No dependencies
+
+releaseApk - Classpath packaged with the compiled 'release' classes.
+No dependencies
+
+releaseCompile - Classpath for compiling the release sources.
+No dependencies
+
+releaseProvided - Classpath for only compiling the release sources.
+No dependencies
+
+releaseWearApp - Link to a wear app to embed for object 'release'.
+No dependencies
+
+testApk - Classpath packaged with the compiled 'test' classes.
+No dependencies
+
+testCompile - Classpath for compiling the test sources.
+\--- junit:junit:4.12
+     \--- org.hamcrest:hamcrest-core:1.3
+
+testDebugApk - Classpath packaged with the compiled 'testDebug' classes.
+No dependencies
+
+testDebugCompile - Classpath for compiling the testDebug sources.
+No dependencies
+
+testDebugProvided - Classpath for only compiling the testDebug sources.
+No dependencies
+
+testDebugWearApp - Link to a wear app to embed for object 'testDebug'.
+No dependencies
+
+testFreeApk - Classpath packaged with the compiled 'testFree' classes.
+No dependencies
+
+testFreeCompile - Classpath for compiling the testFree sources.
+No dependencies
+
+testFreeDebugApk - Classpath packaged with the compiled 'testFreeDebug' classes.
+No dependencies
+
+testFreeDebugCompile - Classpath for compiling the testFreeDebug sources.
+No dependencies
+
+testFreeDebugProvided - Classpath for only compiling the testFreeDebug sources.
+No dependencies
+
+testFreeDebugWearApp - Link to a wear app to embed for object 'testFreeDebug'.
+No dependencies
+
+testFreeProvided - Classpath for only compiling the testFree sources.
+No dependencies
+
+testFreeReleaseApk - Classpath packaged with the compiled 'testFreeRelease' classes.
+No dependencies
+
+testFreeReleaseCompile - Classpath for compiling the testFreeRelease sources.
+No dependencies
+
+testFreeReleaseProvided - Classpath for only compiling the testFreeRelease sources.
+No dependencies
+
+testFreeReleaseWearApp - Link to a wear app to embed for object 'testFreeRelease'.
+No dependencies
+
+testFreeWearApp - Link to a wear app to embed for object 'testFree'.
+No dependencies
+
+testPaidApk - Classpath packaged with the compiled 'testPaid' classes.
+No dependencies
+
+testPaidCompile - Classpath for compiling the testPaid sources.
+No dependencies
+
+testPaidDebugApk - Classpath packaged with the compiled 'testPaidDebug' classes.
+No dependencies
+
+testPaidDebugCompile - Classpath for compiling the testPaidDebug sources.
+No dependencies
+
+testPaidDebugProvided - Classpath for only compiling the testPaidDebug sources.
+No dependencies
+
+testPaidDebugWearApp - Link to a wear app to embed for object 'testPaidDebug'.
+No dependencies
+
+testPaidProvided - Classpath for only compiling the testPaid sources.
+No dependencies
+
+testPaidReleaseApk - Classpath packaged with the compiled 'testPaidRelease' classes.
+No dependencies
+
+testPaidReleaseCompile - Classpath for compiling the testPaidRelease sources.
+No dependencies
+
+testPaidReleaseProvided - Classpath for only compiling the testPaidRelease sources.
+No dependencies
+
+testPaidReleaseWearApp - Link to a wear app to embed for object 'testPaidRelease'.
+No dependencies
+
+testPaidWearApp - Link to a wear app to embed for object 'testPaid'.
+No dependencies
+
+testProvided - Classpath for only compiling the test sources.
+No dependencies
+
+testReleaseApk - Classpath packaged with the compiled 'testRelease' classes.
+No dependencies
+
+testReleaseCompile - Classpath for compiling the testRelease sources.
+No dependencies
+
+testReleaseProvided - Classpath for only compiling the testRelease sources.
+No dependencies
+
+testReleaseWearApp - Link to a wear app to embed for object 'testRelease'.
+No dependencies
+
+testWearApp - Link to a wear app to embed for object 'test'.
+No dependencies
+
+wearApp - Link to a wear app to embed for object 'main'.
+No dependencies
+
+BUILD SUCCESSFUL
+
+Total time: 6.679 secs

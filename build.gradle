@@ -21,3 +21,48 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+/**
+ * Preventing start GCE
+ * server task to consume main thread,
+ * we run app engine in daemon thread.
+ */
+evaluationDependsOn ":gce"
+project(":gce"){
+    appengine{
+        daemon true
+    }
+}
+
+/**
+ * Task used to start local GCE server.
+ */
+task startGCE {
+    dependsOn tasks.getByPath(":gce:appengineRun")
+}
+
+/**
+ * Task used to top running local GCE server.
+ */
+task stopGCE {
+    dependsOn tasks.getByPath(':gce:appengineStop')
+}
+
+/**
+ * Task used to run all connected tests across all connected devices/emulators.
+ */
+task runAllAndroidTests{
+    dependsOn tasks.getByPath(":app:connectedAndroidTest")
+}
+
+/**
+ * Task used to do following tasks in sequence :
+ * > Start local GCE server.
+ * > Run all connected tests across all connected devices/emulators.
+ * > Stop local GCE server.
+ */
+task runAllAndroidTestWithLocalGCE {
+    dependsOn = ["startGCE","runAllAndroidTests","stopGCE"]
+    runAllAndroidTests.mustRunAfter startGCE
+    stopGCE.mustRunAfter runAllAndroidTests
+}
