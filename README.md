@@ -13,6 +13,7 @@ Screenshots
 -----------
 ![Demo Screenshot 2][2] ![Demo Screenshot 3][3] 
 ![Demo Screenshot 4][4] ![Demo Screenshot 5][5]
+![Demo Screenshot 6][6]
 
 
 Developed By
@@ -41,3 +42,4 @@ License
 [3]: ./demoPics/truckRunning.gif
 [4]: ./demoPics/loading.gif
 [5]: ./demoPics/joke.png
+[6]: ./demoPics/ad.png
